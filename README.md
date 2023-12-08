@@ -34,3 +34,7 @@ Apply filter ip.host == 10.129.43.4
 Following an examination of the conversations depicted above, it's noticeable that three conversations were captured, all directly associated with our suspicious host identified as 10.129.43.4. Our subsequent course of action involves inspecting the protocol hierarchy to gain insights into the nature and composition of this traffic.
 
 <h2>Protocol Statistics</h2>
+
+![Screenshot 2023-12-08 at 2 51 06 PM copy](https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/962d214c-959f-4038-85c4-bd9b3fdba8bc)
+
+The network traffic within this PCAP file primarily consists of TCP traffic, accompanied by a smaller portion of UDP traffic. Given the lesser prevalence of UDP compared to TCP, our initial focus will be on isolating and examining UDP traffic to uncover any anomalies. To streamline our analysis, we'll begin by filtering out all non-UDP traffic, aiming to identify and investigate any potentially unusual occurrences within this subset.
