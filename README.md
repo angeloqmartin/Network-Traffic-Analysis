@@ -38,3 +38,34 @@ Following an examination of the conversations depicted above, it's noticeable th
 ![Screenshot 2023-12-08 at 2 51 06 PM copy](https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/962d214c-959f-4038-85c4-bd9b3fdba8bc)
 
 The network traffic within this PCAP file primarily consists of TCP traffic, accompanied by a smaller portion of UDP traffic. Given the lesser prevalence of UDP compared to TCP, our initial focus will be on isolating and examining UDP traffic to uncover any anomalies. To streamline our analysis, we'll begin by filtering out all non-UDP traffic, aiming to identify and investigate any potentially unusual occurrences within this subset.
+
+<h2>UDP</h2>
+
+Apply filter !tcp
+
+<img width="1376" alt="Screenshot 2023-12-08 at 3 46 00 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/378bf087-5a51-41a2-92a2-cb108816e302">
+
+The network traffic within this PCAP file primarily consists of TCP traffic, accompanied by a smaller portion of UDP traffic. Given the lesser prevalence of UDP compared to TCP, our initial focus will be on isolating and examining UDP traffic to uncover any anomalies. To streamline our analysis, we'll begin by filtering out all non-UDP traffic, aiming to identify and investigate any potentially unusual occurrences within this subset.
+
+<h2>TCP</h2>
+
+The following filter “!udp && !arp” will clear out anything we have already analyzed
+
+<img width="1437" alt="Screenshot 2023-12-08 at 4 00 00 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/2b20b9c8-ef9d-4b13-af55-4b415c94b233">
+
+All the remaining packets within the dataset belong to the TCP protocol. Notably, these packets seem to constitute a single ongoing conversation between our specified target host, "10.129.43.4," and IP address 10.129.43.29. This determination is based on the observation of a session establishment through a three-way handshake, which occurs in packet 3. Additionally, the consistent usage of the same ports across the subsequent packets in the output further supports this ongoing communication between the specified hosts.
+
+<h2>TCP Session Establishment</h2>
+
+<img width="1376" alt="Screenshot 2023-12-08 at 4 19 05 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/4203f868-ccb0-47e4-8a9f-ede6ee88d777">
+
+A notable absence in this PCAP file is the lack of a TCP session "teardown." This absence suggests that the session might have remained active and not yet terminated, which is further supported by the absence of any Reset packets. To confirm and gain a deeper understanding, the next steps involve examining the conversation by tracing the TCP stream to comprehend the content and nature of this ongoing communication.
+
+<h2>Follow TCP Stream</h2>
+
+
+
+
+
+
+
