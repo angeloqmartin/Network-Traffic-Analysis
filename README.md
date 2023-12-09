@@ -11,15 +11,15 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/15b94f
 The recent live traffic analysis revealed suspicious activity originating from within the network. Our immediate objective is to pinpoint the exact source of this questionable traffic.
 
 1. Establishing Scope and Goal:
-<br>- 1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
-  - 1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.
-  - 1.3 Supporting Information: Utilizing pcap file containing the exported results.
+  1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
+  1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.
+  1.3 Supporting Information: Utilizing pcap file containing the exported results.
 2. Defining Targets:
-  - 2.2 Focus: Investigating traffic associated with 10.129.43.4 and all connections to it, particularly unidentified protocol traffic using port 4444.
+  2.2 Focus: Investigating traffic associated with 10.129.43.4 and all connections to it, particularly unidentified protocol traffic using port 4444.
 3. In-Depth Analysis of the PCAP File Capturing Network Traffic within the 10.129.43.0/24 network:
-  - 3.1 Anticipate the presence of suspicious traffic within the captured data, specifically related to the suspected source.
+  3.1 Anticipate the presence of suspicious traffic within the captured data, specifically related to the suspected source.
 4. Identifying Necessary Network Traffic Components (Filtering):
-  - 4.1 Initial filtering will involve excluding any traffic not associated with connections to 10.129.43.4. This step prioritizes our investigation by concentrating on our primary suspicious target.
+  4.1 Initial filtering will involve excluding any traffic not associated with connections to 10.129.43.4. This step prioritizes our investigation by concentrating on our primary suspicious target.
 
 Apply filter ip.host == 10.129.43.4
 <img width="1440" alt="Screenshot 2023-12-08 at 12 12 23 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/0c5c7cbb-d1d3-477c-b31f-e435f9f8966e">
@@ -39,7 +39,6 @@ The network traffic within this PCAP file primarily consists of TCP traffic, acc
 <h2>UDP</h2>
 
 Apply filter !tcp
-
 <img width="1376" alt="Screenshot 2023-12-08 at 3 46 00 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/378bf087-5a51-41a2-92a2-cb108816e302">
 
 The network traffic within this PCAP file primarily consists of TCP traffic, accompanied by a smaller portion of UDP traffic. Given the lesser prevalence of UDP compared to TCP, our initial focus will be on isolating and examining UDP traffic to uncover any anomalies. To streamline our analysis, we'll begin by filtering out all non-UDP traffic, aiming to identify and investigate any potentially unusual occurrences within this subset.
@@ -47,7 +46,6 @@ The network traffic within this PCAP file primarily consists of TCP traffic, acc
 <h2>TCP</h2>
 
 The following filter “!udp && !arp” will clear out anything we have already analyzed
-
 <img width="1437" alt="Screenshot 2023-12-08 at 4 00 00 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/2b20b9c8-ef9d-4b13-af55-4b415c94b233">
 
 All the remaining packets within the dataset belong to the TCP protocol. Notably, these packets seem to constitute a single ongoing conversation between our specified target host, "10.129.43.4," and IP address 10.129.43.29. This determination is based on the observation of a session establishment through a three-way handshake, which occurs in packet 3. Additionally, the consistent usage of the same ports across the subsequent packets in the output further supports this ongoing communication between the specified hosts.
