@@ -11,7 +11,7 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/15b94f
 The recent live traffic analysis revealed suspicious activity originating from within the network. Our immediate objective is to pinpoint the exact source of this questionable traffic.
 
 1. Establishing Scope and Goal:
-  1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
+  1.1. Objective: Identify the source of traffic originating from 10.129.43.4.
   1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.
   1.3 Supporting Information: Utilizing pcap file containing the exported results.
 2. Defining Targets:
