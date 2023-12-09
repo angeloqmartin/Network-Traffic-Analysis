@@ -11,9 +11,9 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/15b94f
 The recent live traffic analysis revealed suspicious activity originating from within the network. Our immediate objective is to pinpoint the exact source of this questionable traffic.
 
 1.0 Establishing Scope and Goal:
-1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
-1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.
-1.3 Supporting Information: Utilizing pcap file containing the exported results.
+- 1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
+- 1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.
+- 1.3 Supporting Information: Utilizing pcap file containing the exported results.
 
 **Apply filter ip.host == 10.129.43.4
 <img width="1440" alt="Screenshot 2023-12-08 at 12 12 23 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/0c5c7cbb-d1d3-477c-b31f-e435f9f8966e">
