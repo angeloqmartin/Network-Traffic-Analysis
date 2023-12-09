@@ -4,9 +4,7 @@
 
 The initial step involves connecting to a virtual private network (VPN) to begin network traffic analysis. This connection facilitates access to a live Virtual Machine (VM) host, enabling access to a Graphical User Interface (GUI). Through this setup, the goal is to use Wireshark, a deep and comprehensive analysis tool, within the environment to extract meaningful insights, actionable information, and suspicious traffic from the network traffic data.
 
-
 https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/15b94f60-eeb7-4fcf-bf2d-e7ecb33cf3ea
-
 
 <h2>Analysis</h2>
 
@@ -25,7 +23,6 @@ The recent live traffic analysis revealed suspicious activity originating from w
 
 Apply filter ip.host == 10.129.43.4
 <img width="1440" alt="Screenshot 2023-12-08 at 12 12 23 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/0c5c7cbb-d1d3-477c-b31f-e435f9f8966e">
-
 
 <h2>Conversations</h2>
 
@@ -63,9 +60,8 @@ A notable absence in this PCAP file is the lack of a TCP session "teardown." Thi
 
 <h2>Follow TCP Stream</h2>
 
+https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/c0312edd-615e-47d1-9f09-90e3a0ed61d8
 
-
-
-
+Upon inspecting the TCP stream, several concerning observations can be made. The entire conversation between the two hosts is in plain text, revealing that someone conducted various activities on the host. Upon reviewing the content further, it's evident that the actor was conducting basic reconnaissance of the host. They executed commands such as whoami, ipconfig, and dir. This indicates an attempt to survey and ascertain the user context they've landed in on the host as if trying to understand the environment and user privileges.
 
 
