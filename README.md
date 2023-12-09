@@ -10,27 +10,27 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/15b94f
 
 The recent live traffic analysis revealed suspicious activity originating from within the network. Our immediate objective is to pinpoint the exact source of this questionable traffic.
 
-1.0 Establishing Scope and Goal:  
+1.0 Establishing Scope and Goal:
 
-  1.1 Objective: Identify the source of traffic originating from 10.129.43.4.  
+- 1.1 Objective: Identify the source of traffic originating from 10.129.43.4.  
 
-  1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.  
+- 1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.  
 
-  1.3 Supporting Information: Utilizing pcap file containing the exported results.  
+- 1.3 Supporting Information: Utilizing pcap file containing the exported results.  
 
 2.0 Defining Targets  
 
-  2.2 Focus: Investigating traffic associated with 10.129.43.4 and all connections to it, particularly unidentified protocol traffic using port 4444. 
+- 2.2 Focus: Investigating traffic associated with 10.129.43.4 and all connections to it, particularly unidentified protocol traffic using port 4444. 
 
 3.0 In-Depth Analysis of the PCAP File Capturing Network Traffic within the 10.129.43.0/24 network:  
 
-  3.1 Anticipate the presence of suspicious traffic within the captured data, specifically related to the suspected source.  
+- 3.1 Anticipate the presence of suspicious traffic within the captured data, specifically related to the suspected source.  
 
 4.0 Identifying Necessary Network Traffic Components (Filtering):  
 
-  4.1 Initial filtering will involve excluding any traffic not associated with connections to 10.129.43.4. This step prioritizes our investigation by concentrating on our primary suspicious target.
+- 4.1 Initial filtering will involve excluding any traffic not associated with connections to 10.129.43.4. This step prioritizes our investigation by concentrating on our primary suspicious target.
 
-**Apply filter ip.host == 10.129.43.4
+Apply filter ip.host == 10.129.43.4
 <img width="1440" alt="Screenshot 2023-12-08 at 12 12 23 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/0c5c7cbb-d1d3-477c-b31f-e435f9f8966e">
 
 <h2>Conversations</h2>
@@ -82,22 +82,22 @@ The analysis reveals a troubling discovery: the creation of an account named "ha
 <h2>Remediation Action:</h2>
 
 1. Isolate and Quarantine:
-          * Immediately isolate the affected host 10.129.43.29 on the network to prevent further potential damage or unauthorized access.
+	- Immediately isolate the affected host 10.129.43.29 on the network to prevent further potential damage or unauthorized access.
 3. Disable the Suspect Account:
-          * Disable or remove the"hacker" account and any other suspicious accounts created on the compromised host.
+	- Disable or remove the"hacker" account and any other suspicious accounts created on the compromised host.
 4. Review User Permissions:
-          * Conduct a thorough review of user accounts and permissions across the network, particularly within the administrator's group. Remove unauthorized access and limit privileges to necessary functionalities.
+	- Conduct a thorough review of user accounts and permissions across the network, particularly within the administrator's group. Remove unauthorized access and limit privileges to necessary functionalities.
 5. Forensic Analysis:
-          * Perform in-depth forensic analysis on the compromised host and associated network logs to understand the extent of the intrusion and identify potential points of entry.
+	- Perform in-depth forensic analysis on the compromised host and associated network logs to understand the extent of the intrusion and identify potential points of entry.
 6. Patch and Update Systems:
-          * Ensure that all systems, including software and applications, are up-to-date with the latest security patches and configurations to mitigate known vulnerabilities.
+	- Ensure that all systems, including software and applications, are up-to-date with the latest security patches and configurations to mitigate known vulnerabilities.
 7. Implement Stronger Authentication Measures:
-          * Enforce stronger password policies, multi-factor authentication, and access controls to enhance security and prevent unauthorized access.
+	- Enforce stronger password policies, multi-factor authentication, and access controls to enhance security and prevent unauthorized access.
 8. Security Awareness Training:
-          * Conduct security awareness training sessions for employees to educate them on identifying and reporting suspicious activities or security threats.
+	- Conduct security awareness training sessions for employees to educate them on identifying and reporting suspicious activities or security threats.
 9. Incident Response Plan:
-          * Review and update the incident response plan to include steps for handling similar security incidents promptly in the future.
+	- Review and update the incident response plan to include steps for handling similar security incidents promptly in the future.
 10. Continuous Monitoring and Analysis:
-          * Implement robust monitoring tools and practices to continuously analyze network traffic for any abnormal activities or potential threats.
+	- Implement robust monitoring tools and practices to continuously analyze network traffic for any abnormal activities or potential threats.
 
 These remediation actions should be carried out promptly and in coordination with the organization's IT security team to effectively mitigate the risks posed by the identified security breach.
