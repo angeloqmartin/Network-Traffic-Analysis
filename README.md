@@ -11,7 +11,7 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/15b94f
 The recent live traffic analysis revealed suspicious activity originating from within the network. Our immediate objective is to pinpoint the exact source of this questionable traffic.
 
 1. Establishing Scope and Goal:
-  - 1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
+<br>- 1.1 Objective: Identify the source of traffic originating from 10.129.43.4.
   - 1.2 Timeframe: Analyzing traffic ongoing for the past 48 hours.
   - 1.3 Supporting Information: Utilizing pcap file containing the exported results.
 2. Defining Targets:
@@ -65,4 +65,14 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/c0312e
 Upon inspecting the TCP stream, several concerning observations can be made. The entire conversation between the two hosts is in plain text, revealing that someone conducted various activities on the host. Upon reviewing the content further, it's evident that the actor was conducting basic reconnaissance of the host. They executed commands such as whoami, ipconfig, and dir. This indicates an attempt to survey and ascertain the user context they've landed in on the host as if trying to understand the environment and user privileges.
 
 <img width="661" alt="Screenshot 2023-12-08 at 6 08 27 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/74515698-459e-48c4-9c0c-450e3c22eb7d">
+
+<h2>Summary and Remediation</h2>
+
+<img width="711" alt="Screenshot 2023-12-09 at 12 32 23 AM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/2a23ee68-d3eb-4ca6-ab51-5869c626db13">
+
+The analysis reveals a troubling discovery: the creation of an account named "hacker" and its inclusion in the administrator's group on the host. This finding raises serious concerns as it could be an error by an inexperienced administrator or, more worryingly, a sign of unauthorized access and potential intrusion into the corporate infrastructure. Our analysis indicates the infiltration of at least one host on the network. Specifically, host 10.129.43.29 demonstrates evidence of command execution involving user creation and the assignment of local administrator permissions using "net" commands. This suggests that the actor might have been leveraging this host to perform these actions.
+
+<h2>Remediation Action:</h2>
+
+1. Isolate and Quarantine:
 
