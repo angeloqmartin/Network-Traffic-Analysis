@@ -64,4 +64,5 @@ https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/c0312e
 
 Upon inspecting the TCP stream, several concerning observations can be made. The entire conversation between the two hosts is in plain text, revealing that someone conducted various activities on the host. Upon reviewing the content further, it's evident that the actor was conducting basic reconnaissance of the host. They executed commands such as whoami, ipconfig, and dir. This indicates an attempt to survey and ascertain the user context they've landed in on the host as if trying to understand the environment and user privileges.
 
+<img width="661" alt="Screenshot 2023-12-08 at 6 08 27 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/74515698-459e-48c4-9c0c-450e3c22eb7d">
 
