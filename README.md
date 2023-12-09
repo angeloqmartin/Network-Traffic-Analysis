@@ -22,7 +22,7 @@ The recent live traffic analysis revealed suspicious activity originating from w
       * 4.1 Initial filtering will involve excluding any traffic not associated with connections to 10.129.43.4. This step prioritizes our investigation by concentrating on our primary suspicious target.
 
 
-Apply filter ip.host == 10.129.43.4
+**Apply filter ip.host == 10.129.43.4
 <img width="1440" alt="Screenshot 2023-12-08 at 12 12 23 PM" src="https://github.com/angeloqmartin/Network-Traffic-Analysis/assets/37564935/0c5c7cbb-d1d3-477c-b31f-e435f9f8966e">
 
 <h2>Conversations</h2>
@@ -74,22 +74,22 @@ The analysis reveals a troubling discovery: the creation of an account named "ha
 <h2>Remediation Action:</h2>
 
 1. Isolate and Quarantine:
-  -Immediately isolate the affected host 10.129.43.29 on the network to prevent further potential damage or unauthorized access.
+          * Immediately isolate the affected host 10.129.43.29 on the network to prevent further potential damage or unauthorized access.
 3. Disable the Suspect Account:
-<br>-Disable or remove the"hacker" account and any other suspicious accounts created on the compromised host.
+          * Disable or remove the"hacker" account and any other suspicious accounts created on the compromised host.
 4. Review User Permissions:
-<br>-Conduct a thorough review of user accounts and permissions across the network, particularly within the administrator's group. Remove unauthorized access and limit privileges to necessary functionalities.
+          * Conduct a thorough review of user accounts and permissions across the network, particularly within the administrator's group. Remove unauthorized access and limit privileges to necessary functionalities.
 5. Forensic Analysis:
-<br>-Perform in-depth forensic analysis on the compromised host and associated network logs to understand the extent of the intrusion and identify potential points of entry.
+          * Perform in-depth forensic analysis on the compromised host and associated network logs to understand the extent of the intrusion and identify potential points of entry.
 6. Patch and Update Systems:
-<br>-Ensure that all systems, including software and applications, are up-to-date with the latest security patches and configurations to mitigate known vulnerabilities.
+          * Ensure that all systems, including software and applications, are up-to-date with the latest security patches and configurations to mitigate known vulnerabilities.
 7. Implement Stronger Authentication Measures:
-<br>-Enforce stronger password policies, multi-factor authentication, and access controls to enhance security and prevent unauthorized access.
+          * Enforce stronger password policies, multi-factor authentication, and access controls to enhance security and prevent unauthorized access.
 8. Security Awareness Training:
-<br>-Conduct security awareness training sessions for employees to educate them on identifying and reporting suspicious activities or security threats.
+          * Conduct security awareness training sessions for employees to educate them on identifying and reporting suspicious activities or security threats.
 9. Incident Response Plan:
-<br>-Review and update the incident response plan to include steps for handling similar security incidents promptly in the future.
+          * Review and update the incident response plan to include steps for handling similar security incidents promptly in the future.
 10. Continuous Monitoring and Analysis:
-<br>-Implement robust monitoring tools and practices to continuously analyze network traffic for any abnormal activities or potential threats.
+          * Implement robust monitoring tools and practices to continuously analyze network traffic for any abnormal activities or potential threats.
 
 These remediation actions should be carried out promptly and in coordination with the organization's IT security team to effectively mitigate the risks posed by the identified security breach.
